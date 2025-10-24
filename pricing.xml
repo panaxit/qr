@@ -1,0 +1,9 @@
+﻿<?xml-stylesheet type="text/xsl" href="pricing.xslt" target="body"?>
+<pricing>
+  <option title="Mensual" price="3" unit="alumno">
+  </option>
+  <option title="Anual" price="25" unit="alumno">
+  </option>
+  <option title="Preventa" price="12000" unit="pago único">
+  </option>
+</pricing>

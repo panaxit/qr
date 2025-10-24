@@ -1,0 +1,23 @@
+{
+  "database": "main",
+  "server": {
+    "endpoints": {
+      "login": "../xdom/server/login.asp",
+      "logout": "../xdom/server/logout.asp",
+      "session": "../xdom/server/session.asp",
+      "request": "../xdom/server/request.asp",
+      "uploadFile": "../xdom/server/fileUploader.asp",
+      "uploadFileManager": "../xdom/server/uploadFileManager.asp",
+      "post": "../xdom/server/post.asp",
+      "load_session": "../xdom/server/load_session.asp",
+      "save_session": "../xdom/server/saveSession.asp",
+      "upload_xml": "../xdom/server/upload_xml.asp",
+      "clearCache": "../xdom/server/clearCache.asp"
+    }
+  },
+  "sources": {
+    "#":  "#minerva",
+    "#minerva": cuestionario.load,
+    "#pricing":  "pricing.xml"
+  }
+}
