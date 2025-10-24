@@ -1,0 +1,15 @@
+.super-centered {
+    display: grid;
+    place-items: center;
+}
+
+.deconstructed-pancake.parent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.deconstructed-pancake.parent > .children {
+    flex: 1 1 150px;
+    margin: 5px;
+}

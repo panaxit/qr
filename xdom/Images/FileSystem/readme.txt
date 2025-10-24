@@ -1,0 +1,1 @@
+La mayoría de las imágenes fueron descargadas de findicons.com y el paquete es "File Icons Vs. 3 Icon Pack by Jordan Michael"
