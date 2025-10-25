@@ -80,6 +80,29 @@
             localStorage.setItem("scanned", JSON.stringify(scanned));
         }
 
+        async function decrypt() {
+            const qr_code = document.querySelector("#scanned-QR");
+            let coto, code = qr_code.innerText.replace("QR Code: ", "");
+            [code, coto] = atob(code).split("#");
+            if (location.hash !== `#${coto}`) alert(`El código no corresponde al coto seleccionado`);
+            const [codigo, amenidad] = code.split(":").reverse();
+            const labels = { gym: "Gimnasio" };
+            const calles = ["Cantabria", "Santander"];
+
+            // Estructura: 1 + 3 + (resto)
+            const match = codigo.match(/^(\d)(\d{3})(\d)$/);
+            if (!match) {
+                alert("Formato de código no válido.");
+                return;
+            }
+
+            const [, calleIdx, numero, usuario] = match;
+            const calle = calles[parseInt(calleIdx) - 1] || "Desconocida";
+
+            alert(`Código de ${labels[amenidad] || amenidad} para ${calle} ${numero} (Usuario ${usuario}): ${codigo}`);
+        }
+
+
         document.addEventListener("DOMContentLoaded", function () {
             var qr_code = document.querySelector("#scanned-QR");
             document.querySelector("#pending_codes").innerText = codes.length
